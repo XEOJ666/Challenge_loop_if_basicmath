@@ -33,4 +33,5 @@ int main()
         e = sqrt(c / d);
         printf("\nAverage = %.1f\n", x / n);
         printf("SD = %.2f", (e));
+    return 0;
 }
