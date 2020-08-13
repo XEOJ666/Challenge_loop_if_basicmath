@@ -6,7 +6,10 @@ int main()
     scanf_s("%lf %lf", &i, &b);
     int n = abs(i - b) + 1;
     if (i == b)
-        printf("Error");
+    {
+        printf("Error"); 
+        return 0;
+    }
     else if (i <= b)
     {
         for (i = i;i <= b;i++)
@@ -15,12 +18,6 @@ int main()
             x += i;
             xsqr += pow(i, 2);
         }
-        c = (n * xsqr - pow(x, 2));
-        d = (n * (n - 1));
-        e = sqrt(c / d);
-        puts(" ");
-        printf("Average = %.2f\n", x / n);
-        printf("SD = %.2f", (e));
     }
     else if (i >= b)
     {
@@ -30,11 +27,10 @@ int main()
             x += i;
             xsqr += pow(i, 2);
         }
-        c = (n * xsqr - pow(x, 2));
+    }
+    c = (n * xsqr - pow(x, 2));
         d = (n * (n - 1));
         e = sqrt(c / d);
-        puts(" ");
-        printf("Average = %.2f\n", x / n);
+        printf("\nAverage = %.1f\n", x / n);
         printf("SD = %.2f", (e));
-    }
 }
